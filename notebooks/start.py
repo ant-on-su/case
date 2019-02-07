@@ -14,10 +14,6 @@ df.head()
 pandas_profiling.ProfileReport(df).to_file(
 outputfile='./output/pd-profiling.html')
 
-#%% [markdown]
-# ## Observations:
-# 80% entire home -OK, 19% private, 0.5% shared room - B&B accoridng to Gemeente -check!
-# Wierd extremes: 
-# -minimum nights 365, 523, 1k ?
-# -price 977 - 8616 p/night?!
- 
+#%%
+pd.to_datetime(df['last_review'])
+df.dtypes
